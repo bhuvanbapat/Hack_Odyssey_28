@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>LEARN - Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>LEARN</h1>
+        <form action="/questionnaire" method="get">
+            <input type="text" name="username" placeholder="Enter your name" required />
+            <button type="submit">Start</button>
+        </form>
+    </div>
+
+<!DOCTYPE html>
+    <title>LEARN - Questionnaire</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Hello User 👋</h2>
+        <form action="/generate-roadmap" method="post">
+            <input type="hidden" name="username" value="{{ username }}">
+            <label>Age Group:</label>
+            <select name="age_group" required>
+                <option value="child">Under 12
+              </option>
+                <option value="teen">13–19</option>
+                <option value="adult">20+</option>
+            </select>
+
+            </label>Type of Disability:</label>
+            <select name="disability" required>
+                <option value="visual">Visual Impairment</option>
+                <option value="hearing">Hearing Impairment</option>
+                <option value="cognitive">Cognitive Disability</option>
+            </select>
+
+            </button type="submit">Get My Roadmap</button>
+        </form>
+    </div>
+</body>
+</html>
